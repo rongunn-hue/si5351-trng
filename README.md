@@ -1,5 +1,12 @@
 # Si5351 TRNG
 
+# COMPLETELY EXPERIMENTAL
+
+## Not tested on hardware. Not proven random. Do not use it for anything that matters.
+
+> [!WARNING]
+> This is an experiment in progress. The firmware has only been compiled, never run on the board, and the host tools have only seen synthetic data. Nothing here shows that the output is random, and there is a specific, unresolved reason to doubt it (see "How the jitter technique works, and where it can fail"). Do **not** use it for cryptography, keys, security, gambling or any other purpose that depends on real randomness. It may not work at all.
+
 An experimental **hardware true-random-number generator** built from parts on hand: two free-running **Si5351 clock-generator boards**, a **74HCT74** dual D flip-flop, a **TCA9548A I2C multiplexer board** and a **PICAXE-08M2**.
 
 **This is an experiment. Nothing here claims that the output is random.** The point of the project is to build the source, collect raw bits, and find out.
