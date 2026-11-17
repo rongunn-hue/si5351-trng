@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/rgunn/rs_pcb/trng/sch/trng_v6.kicad_sch</source>
+    <date>2026-11-17T15:45:31</date>
+    <tool>Eeschema 10.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Si5351 TRNG</title>
+        <company>Ethelbert Design</company>
+        <rev/>
+        <date>11/26</date>
+        <source>trng_v6.kicad_sch</source>
+        <comment number="1" value="Boxes are purchased modules, pins as printed. Q1 -&gt; D2; C.4 clocks FF2; C.3 reads Q2."/>
+        <comment number="2" value="Hi2c master C.2 SDA, C.1 SCL -&gt; TCA9548A; ch0 -&gt; A -&gt; D1; ch1 -&gt; B -&gt; CLK1"/>
+        <comment number="3" value="Si5351 / PICAXE-08M2 TRNG V6, 5 V. All serial through the download socket (C.0, C.5)."/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100nF</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e5deaa68-93c2-4bef-a442-877f7c5f576b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>91879d2f-6845-4623-bbf0-3d1c8fe77aa2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>POWER 5 V</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="filter" part="CONN_POWER" description=""/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cea67e2f-aa8d-4c64-9e09-0a95ac46c54d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>DOWNLOAD</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="filter" part="CONN_DOWNLOAD" description=""/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6b372a6a-52be-4bab-9517-d304b4af3fbf</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>22k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>64d076dc-7ae3-4068-9976-9daad0bfeb1f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>93872f75-f10c-4794-a55c-2ea95ce6eb66</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>PICAXE-08M2</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="filter" part="PICAXE_08M2" description=""/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>59dd840d-d01f-45c9-9108-1546cd6fffb4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="7"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="1"/>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>TCA9548A MODULE HW-617</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="filter" part="TCA9548A_MODULE" description=""/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6a513f44-00ca-41f6-ae3d-65d9fb305dfe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="VIN"/>
+            <pin num="GND"/>
+            <pin num="SDA"/>
+            <pin num="SCL"/>
+            <pin num="RST"/>
+            <pin num="A0"/>
+            <pin num="A1"/>
+            <pin num="A2"/>
+            <pin num="SD0"/>
+            <pin num="SC0"/>
+            <pin num="SD1"/>
+            <pin num="SC1"/>
+            <pin num="SD2"/>
+            <pin num="SC2"/>
+            <pin num="SD3"/>
+            <pin num="SC3"/>
+            <pin num="SD4"/>
+            <pin num="SC4"/>
+            <pin num="SD5"/>
+            <pin num="SC5"/>
+            <pin num="SD6"/>
+            <pin num="SC6"/>
+            <pin num="SD7"/>
+            <pin num="SC7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>Si5351 MODULE A</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="filter" part="SI5351_MODULE" description=""/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4cac8db8-4b3d-4b6a-9347-c24681ea1d57</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="0"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="VIN"/>
+            <pin num="GND"/>
+            <pin num="SDA"/>
+            <pin num="SCL"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>Si5351 MODULE B</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="filter" part="SI5351_MODULE" description=""/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a66bfc28-9d47-426c-8227-393b7ce52e88</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="0"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="VIN"/>
+            <pin num="GND"/>
+            <pin num="SDA"/>
+            <pin num="SCL"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U5">
+      <value>74HCT74</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="filter" part="HCT74" description=""/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="trng_v6.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1c7ab6dc-f29f-4466-bd90-fecb5c9cdeb7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="12"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="6"/>
+            <pin num="8"/>
+            <pin num="4"/>
+            <pin num="10"/>
+            <pin num="1"/>
+            <pin num="7"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="filter" part="CONN_DOWNLOAD">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DOWNLOAD</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SER_OUT" type="passive"/>
+        <pin num="2" name="SER_IN" type="passive"/>
+        <pin num="3" name="0V" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="filter" part="CONN_POWER">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">POWER 5 V</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+5V" type="power_out"/>
+        <pin num="2" name="0V" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="filter" part="HCT74">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74HCT74</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="/CLR1" type="input"/>
+        <pin num="2" name="D1" type="input"/>
+        <pin num="3" name="CLK1" type="input"/>
+        <pin num="4" name="/PRE1" type="input"/>
+        <pin num="5" name="Q1" type="output"/>
+        <pin num="6" name="/Q1" type="output"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="/Q2" type="output"/>
+        <pin num="9" name="Q2" type="output"/>
+        <pin num="10" name="/PRE2" type="input"/>
+        <pin num="11" name="CLK2" type="input"/>
+        <pin num="12" name="D2" type="input"/>
+        <pin num="13" name="/CLR2" type="input"/>
+        <pin num="14" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="filter" part="PICAXE_08M2">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PICAXE-08M2</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+V" type="power_in"/>
+        <pin num="2" name="C.5_SER_IN" type="input"/>
+        <pin num="3" name="C.4_CLK2_OUT" type="bidirectional"/>
+        <pin num="4" name="C.3_IN" type="input"/>
+        <pin num="5" name="C.2_SDA" type="bidirectional"/>
+        <pin num="6" name="C.1_SCL" type="bidirectional"/>
+        <pin num="7" name="C.0_SER_OUT" type="bidirectional"/>
+        <pin num="8" name="0V" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="filter" part="SI5351_MODULE">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Si5351 MODULE</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="0" name="CLK0_(0)" type="output"/>
+        <pin num="1" name="CLK1_(1)" type="output"/>
+        <pin num="2" name="CLK2_(2)" type="output"/>
+        <pin num="GND" name="GND" type="power_in"/>
+        <pin num="SCL" name="SCL" type="input"/>
+        <pin num="SDA" name="SDA" type="bidirectional"/>
+        <pin num="VIN" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="filter" part="TCA9548A_MODULE">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TCA9548A MODULE HW-617</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="A0" name="A0" type="input"/>
+        <pin num="A1" name="A1" type="input"/>
+        <pin num="A2" name="A2" type="input"/>
+        <pin num="GND" name="GND" type="power_in"/>
+        <pin num="RST" name="RST" type="input"/>
+        <pin num="SC0" name="SC0" type="passive"/>
+        <pin num="SC1" name="SC1" type="passive"/>
+        <pin num="SC2" name="SC2" type="passive"/>
+        <pin num="SC3" name="SC3" type="passive"/>
+        <pin num="SC4" name="SC4" type="passive"/>
+        <pin num="SC5" name="SC5" type="passive"/>
+        <pin num="SC6" name="SC6" type="passive"/>
+        <pin num="SC7" name="SC7" type="passive"/>
+        <pin num="SCL" name="SCL" type="input"/>
+        <pin num="SD0" name="SD0" type="passive"/>
+        <pin num="SD1" name="SD1" type="passive"/>
+        <pin num="SD2" name="SD2" type="passive"/>
+        <pin num="SD3" name="SD3" type="passive"/>
+        <pin num="SD4" name="SD4" type="passive"/>
+        <pin num="SD5" name="SD5" type="passive"/>
+        <pin num="SD6" name="SD6" type="passive"/>
+        <pin num="SD7" name="SD7" type="passive"/>
+        <pin num="SDA" name="SDA" type="bidirectional"/>
+        <pin num="VIN" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="+5V_1" pintype="power_out"/>
+      <node ref="U1" pin="1" pinfunction="+V_1" pintype="power_in"/>
+      <node ref="U2" pin="RST" pinfunction="RST_RST" pintype="input"/>
+      <node ref="U2" pin="VIN" pinfunction="VIN_VIN" pintype="power_in"/>
+      <node ref="U3" pin="VIN" pinfunction="VIN_VIN" pintype="power_in"/>
+      <node ref="U4" pin="VIN" pinfunction="VIN_VIN" pintype="power_in"/>
+      <node ref="U5" pin="1" pinfunction="/CLR1_1" pintype="input"/>
+      <node ref="U5" pin="10" pinfunction="/PRE2_10" pintype="input"/>
+      <node ref="U5" pin="13" pinfunction="/CLR2_13" pintype="input"/>
+      <node ref="U5" pin="14" pinfunction="VCC_14" pintype="power_in"/>
+      <node ref="U5" pin="4" pinfunction="/PRE1_4" pintype="input"/>
+    </net>
+    <net code="2" name="GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="0V_2" pintype="power_out"/>
+      <node ref="J2" pin="3" pinfunction="0V_3" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="0V_8" pintype="power_in"/>
+      <node ref="U2" pin="A0" pinfunction="A0_A0" pintype="input"/>
+      <node ref="U2" pin="A1" pinfunction="A1_A1" pintype="input"/>
+      <node ref="U2" pin="A2" pinfunction="A2_A2" pintype="input"/>
+      <node ref="U2" pin="GND" pinfunction="GND_GND" pintype="power_in"/>
+      <node ref="U3" pin="GND" pinfunction="GND_GND" pintype="power_in"/>
+      <node ref="U4" pin="GND" pinfunction="GND_GND" pintype="power_in"/>
+      <node ref="U5" pin="7" pinfunction="GND_7" pintype="power_in"/>
+    </net>
+    <net code="3" name="Net-(J2-SER_IN)" class="Default">
+      <node ref="J2" pin="2" pinfunction="SER_IN_2" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="4" name="Net-(J2-SER_OUT)" class="Default">
+      <node ref="J2" pin="1" pinfunction="SER_OUT_1" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="C.0_SER_OUT_7" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="Net-(U1-C.1_SCL)" class="Default">
+      <node ref="U1" pin="6" pinfunction="C.1_SCL_6" pintype="bidirectional"/>
+      <node ref="U2" pin="SCL" pinfunction="SCL_SCL" pintype="input"/>
+    </net>
+    <net code="6" name="Net-(U1-C.2_SDA)" class="Default">
+      <node ref="U1" pin="5" pinfunction="C.2_SDA_5" pintype="bidirectional"/>
+      <node ref="U2" pin="SDA" pinfunction="SDA_SDA" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="Net-(U1-C.3_IN)" class="Default">
+      <node ref="U1" pin="4" pinfunction="C.3_IN_4" pintype="input"/>
+      <node ref="U5" pin="9" pinfunction="Q2_9" pintype="output"/>
+    </net>
+    <net code="8" name="Net-(U1-C.4_CLK2_OUT)" class="Default">
+      <node ref="U1" pin="3" pinfunction="C.4_CLK2_OUT_3" pintype="bidirectional"/>
+      <node ref="U5" pin="11" pinfunction="CLK2_11" pintype="input"/>
+    </net>
+    <net code="9" name="Net-(U1-C.5_SER_IN)" class="Default">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="C.5_SER_IN_2" pintype="input"/>
+    </net>
+    <net code="10" name="Net-(U2-PadSC0)" class="Default">
+      <node ref="U2" pin="SC0" pinfunction="SC0_SC0" pintype="passive"/>
+      <node ref="U3" pin="SCL" pinfunction="SCL_SCL" pintype="input"/>
+    </net>
+    <net code="11" name="Net-(U2-PadSC1)" class="Default">
+      <node ref="U2" pin="SC1" pinfunction="SC1_SC1" pintype="passive"/>
+      <node ref="U4" pin="SCL" pinfunction="SCL_SCL" pintype="input"/>
+    </net>
+    <net code="12" name="Net-(U2-PadSD0)" class="Default">
+      <node ref="U2" pin="SD0" pinfunction="SD0_SD0" pintype="passive"/>
+      <node ref="U3" pin="SDA" pinfunction="SDA_SDA" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="Net-(U2-PadSD1)" class="Default">
+      <node ref="U2" pin="SD1" pinfunction="SD1_SD1" pintype="passive"/>
+      <node ref="U4" pin="SDA" pinfunction="SDA_SDA" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="Net-(U3-CLK0_(0))" class="Default">
+      <node ref="U3" pin="0" pinfunction="CLK0_(0)_0" pintype="output"/>
+      <node ref="U5" pin="2" pinfunction="D1_2" pintype="input"/>
+    </net>
+    <net code="15" name="Net-(U4-CLK0_(0))" class="Default">
+      <node ref="U4" pin="0" pinfunction="CLK0_(0)_0" pintype="output"/>
+      <node ref="U5" pin="3" pinfunction="CLK1_3" pintype="input"/>
+    </net>
+    <net code="16" name="Net-(U5-D2)" class="Default">
+      <node ref="U5" pin="12" pinfunction="D2_12" pintype="input"/>
+      <node ref="U5" pin="5" pinfunction="Q1_5" pintype="output"/>
+    </net>
+    <net code="17" name="unconnected-(U2-PadSC2)" class="Default">
+      <node ref="U2" pin="SC2" pinfunction="SC2_SC2" pintype="passive+no_connect"/>
+    </net>
+    <net code="18" name="unconnected-(U2-PadSC3)" class="Default">
+      <node ref="U2" pin="SC3" pinfunction="SC3_SC3" pintype="passive+no_connect"/>
+    </net>
+    <net code="19" name="unconnected-(U2-PadSC4)" class="Default">
+      <node ref="U2" pin="SC4" pinfunction="SC4_SC4" pintype="passive+no_connect"/>
+    </net>
+    <net code="20" name="unconnected-(U2-PadSC5)" class="Default">
+      <node ref="U2" pin="SC5" pinfunction="SC5_SC5" pintype="passive+no_connect"/>
+    </net>
+    <net code="21" name="unconnected-(U2-PadSC6)" class="Default">
+      <node ref="U2" pin="SC6" pinfunction="SC6_SC6" pintype="passive+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(U2-PadSC7)" class="Default">
+      <node ref="U2" pin="SC7" pinfunction="SC7_SC7" pintype="passive+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(U2-PadSD2)" class="Default">
+      <node ref="U2" pin="SD2" pinfunction="SD2_SD2" pintype="passive+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(U2-PadSD3)" class="Default">
+      <node ref="U2" pin="SD3" pinfunction="SD3_SD3" pintype="passive+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(U2-PadSD4)" class="Default">
+      <node ref="U2" pin="SD4" pinfunction="SD4_SD4" pintype="passive+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(U2-PadSD5)" class="Default">
+      <node ref="U2" pin="SD5" pinfunction="SD5_SD5" pintype="passive+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(U2-PadSD6)" class="Default">
+      <node ref="U2" pin="SD6" pinfunction="SD6_SD6" pintype="passive+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(U2-PadSD7)" class="Default">
+      <node ref="U2" pin="SD7" pinfunction="SD7_SD7" pintype="passive+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(U3-CLK1_(1)-Pad1)" class="Default">
+      <node ref="U3" pin="1" pinfunction="CLK1_(1)_1" pintype="output+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(U3-CLK2_(2)-Pad2)" class="Default">
+      <node ref="U3" pin="2" pinfunction="CLK2_(2)_2" pintype="output+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(U4-CLK1_(1)-Pad1)" class="Default">
+      <node ref="U4" pin="1" pinfunction="CLK1_(1)_1" pintype="output+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(U4-CLK2_(2)-Pad2)" class="Default">
+      <node ref="U4" pin="2" pinfunction="CLK2_(2)_2" pintype="output+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(U5-/Q1-Pad6)" class="Default">
+      <node ref="U5" pin="6" pinfunction="/Q1_6" pintype="output+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(U5-/Q2-Pad8)" class="Default">
+      <node ref="U5" pin="8" pinfunction="/Q2_8" pintype="output+no_connect"/>
+    </net>
+  </nets>
+</export>
